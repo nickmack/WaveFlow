@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>previous_frequency = obj_wave.frequency;
-previous_amplitude = obj_wave.amplitude;
+            <string>previous_amplitude = obj_wave.amplitude;
 </string>
           </argument>
         </arguments>
@@ -49,20 +48,12 @@ previous_amplitude = obj_wave.amplitude;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = mouse_x;
-y = mouse_y;
+            <string>y = mouse_y;
 
-var pixel_distance_x = xstart - x;
 var pixel_distance_y = ystart - y;
 
-obj_wave.frequency = previous_frequency + pixel_distance_x/512;
-obj_wave.amplitude = previous_amplitude + pixel_distance_y;
-
-var freq = obj_wave.frequency;
-var amp = obj_wave.amplitude;
-obj_wave.frequency = max(MIN_FREQ, min(freq, MAX_FREQ));
+var amp = previous_amplitude + pixel_distance_y;
 obj_wave.amplitude = max(MIN_AMPL, min(amp, MAX_AMPL));
-
 
 if !mouse_check_button(mb_left){  
     instance_destroy();

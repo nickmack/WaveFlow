@@ -25,15 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var wave_point_number = 222;
+            <string>var wave_point_number = 200;
 amplitude = 100;
-frequency = 1;
-var init_last = (ceil(room_width/360)*360);
-offset = init_last / wave_point_number;
+offset = (room_width * 1.2) / wave_point_number;
 wave_points = ds_list_create();
 for (var i = 0; i &lt; wave_point_number; i++) {
     var cur_x = i*offset;
-    var cur_y = wave_func(amplitude, frequency, cur_x);
+    var cur_y = wave_func(amplitude, cur_x);
     ds_list_add(wave_points, instance_create(cur_x, cur_y, obj_wave_point));
 }
 

@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>acel = 2;
+vspeed = 4;
+y = room_height/2;
+</string>
           </argument>
         </arguments>
       </action>
@@ -47,10 +50,38 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>wave_point = collision_line( x, 0, x, room_height, obj_wave_point, false, true );
-if wave_point != noone{
-    self.y = wave_point.y - 1 - sprite_get_height(spr_entity);
+            <string>var closest_wp = instance_nearest(x, y, obj_wave_point);
+if closest_wp.y &lt; y {
+    vspeed = min(MAX_V, vspeed - acel);
+} else if closest_wp.y &gt; y {
+    vspeed = max(-MAX_V, vspeed + acel);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_font(fnt_HUD);
+draw_set_halign(fa_center);
+draw_set_color(c_aqua);
+draw_text(room_width/2, 50, "PONTOS: " + string(score));
 </string>
           </argument>
         </arguments>

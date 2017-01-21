@@ -28,6 +28,7 @@
             <string>originx = x;
 image_speed = (image_number + 1) / room_speed;
 image_index = random(image_number-1);
+green = 0;
 </string>
           </argument>
         </arguments>
@@ -56,7 +57,7 @@ image_index = random(image_number-1);
     obj_wave.last_point = id;
 }
 
-y = wave_func(obj_wave.amplitude, obj_wave.frequency, originx);
+y = wave_func(obj_wave.amplitude, originx);
 
 </string>
           </argument>

@@ -9,12 +9,16 @@
     <sprite>sprites\spt_wave</sprite>
     <sprite>sprites\spr_entity</sprite>
     <sprite>sprites\spr_obstacle</sprite>
+    <sprite>sprites\spt_sparkle</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\wave_func.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_HUD</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_wave_point</object>
     <object>objects\obj_wave</object>
@@ -23,16 +27,19 @@
     <object>objects\obj_obstacle</object>
     <object>objects\obj_obstacle_creator</object>
     <object>objects\obj_entity</object>
+    <object>objects\obj_point</object>
+    <object>objects\obj_points_creator</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
-  <constants number="5">
+  <constants number="6">
+    <constant name="MAX_V">10</constant>
     <constant name="GAME_SPEED">4</constant>
-    <constant name="MAX_FREQ">2</constant>
+    <constant name="MAX_FREQ">1.1</constant>
     <constant name="MIN_AMPL">room_height / 20</constant>
     <constant name="MAX_AMPL">room_height / 3</constant>
-    <constant name="MIN_FREQ">0.5</constant>
+    <constant name="MIN_FREQ">0.9</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

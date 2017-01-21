@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>instance_create(room_width, 0, obj_obstacle_creator)
-instance_create(room_width/20, 10, obj_entity)
+instance_create(room_width/15, room_height/2, obj_entity)
+instance_create(0, 0, obj_points_creator);
 </string>
           </argument>
         </arguments>
