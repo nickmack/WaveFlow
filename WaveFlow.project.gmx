@@ -10,8 +10,12 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\wave_func.gml</script>
+  </scripts>
   <objects name="objects">
-    <object>objects\obj_test</object>
+    <object>objects\obj_wave_point</object>
+    <object>objects\obj_wave</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
