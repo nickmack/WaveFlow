@@ -10,6 +10,7 @@
     <sprite>sprites\spr_entity</sprite>
     <sprite>sprites\spr_obstacle</sprite>
     <sprite>sprites\spt_sparkle</sprite>
+    <sprite>sprites\spt_timer</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -29,6 +30,7 @@
     <object>objects\obj_entity</object>
     <object>objects\obj_point</object>
     <object>objects\obj_points_creator</object>
+    <object>objects\obj_timer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
@@ -37,7 +39,7 @@
     <constant name="MAX_V">10</constant>
     <constant name="GAME_SPEED">4</constant>
     <constant name="MAX_FREQ">1.1</constant>
-    <constant name="MIN_AMPL">room_height / 20</constant>
+    <constant name="MIN_AMPL">room_height / 22</constant>
     <constant name="MAX_AMPL">room_height / 3</constant>
     <constant name="MIN_FREQ">0.9</constant>
   </constants>

@@ -25,9 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>acel = 2;
-vspeed = 4;
+            <string>wave_x = x;
+acel = 2;
+vspeed = 4
 y = room_height/2;
+wave_x = x;
+remaining_time = room_speed * 30;
 </string>
           </argument>
         </arguments>
@@ -50,11 +53,19 @@ y = room_height/2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var closest_wp = instance_nearest(x, y, obj_wave_point);
-if closest_wp.y &lt; y {
-    vspeed = min(MAX_V, vspeed - acel);
-} else if closest_wp.y &gt; y {
-    vspeed = max(-MAX_V, vspeed + acel);
+            <string>wave_x += GAME_SPEED;
+var wave_y = wave_func(obj_wave.amplitude, wave_x);
+
+if wave_y &lt; y {
+    vspeed = max(vspeed - acel, -MAX_V);
+} else {
+    vspeed = min(vspeed + acel, MAX_V);
+}
+
+remaining_time--;
+
+if remaining_time &lt; 0 {
+    game_restart();
 }
 </string>
           </argument>
@@ -81,7 +92,15 @@ if closest_wp.y &lt; y {
             <string>draw_set_font(fnt_HUD);
 draw_set_halign(fa_center);
 draw_set_color(c_aqua);
-draw_text(room_width/2, 50, "PONTOS: " + string(score));
+draw_text(room_width/3, 50, "PONTOS: " + string(score));
+
+draw_set_halign(fa_right);
+if remaining_time &lt; room_speed * 10 {
+    if wave_x mod room_speed &lt; room_speed/2 {
+        draw_set_color(c_red);
+    }
+}
+draw_text(5*room_width/6, 50, "TEMPO: " + string(floor(remaining_time / room_speed)) + "s")
 </string>
           </argument>
         </arguments>

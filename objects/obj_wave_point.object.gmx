@@ -58,7 +58,6 @@ green = 0;
 }
 
 y = wave_func(obj_wave.amplitude, originx);
-
 </string>
           </argument>
         </arguments>
