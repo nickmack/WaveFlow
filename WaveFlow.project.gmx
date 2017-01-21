@@ -22,6 +22,12 @@
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
+  <constants number="4">
+    <constant name="MAX_FREQ">2</constant>
+    <constant name="MIN_AMPL">room_height / 20</constant>
+    <constant name="MAX_AMPL">room_height / 3</constant>
+    <constant name="MIN_FREQ">0.4</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

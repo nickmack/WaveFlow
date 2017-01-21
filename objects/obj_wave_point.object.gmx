@@ -54,7 +54,7 @@
     obj_wave.last_point = id;
 }
 
-y = wave_func(obj_wave.amplitude, obj_wave.wavelength, originx);
+y = wave_func(obj_wave.amplitude, obj_wave.frequency, originx);
 
 </string>
           </argument>
