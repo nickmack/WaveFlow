@@ -7,6 +7,8 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spt_wave</sprite>
+    <sprite>sprites\spr_entity</sprite>
+    <sprite>sprites\spr_obstacle</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -18,10 +20,16 @@
     <object>objects\obj_wave</object>
     <object>objects\obj_input</object>
     <object>objects\obj_game_manager</object>
+    <object>objects\obj_obstacle</object>
+    <object>objects\obj_obstacle_creator</object>
+    <object>objects\obj_entity</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
+  <constants number="1">
+    <constant name="GAME_SPEED">5</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
