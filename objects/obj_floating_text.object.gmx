@@ -75,6 +75,7 @@ alarm[0] = 2 * room_speed;
           <argument>
             <kind>1</kind>
             <string>draw_set_font(fnt_text);
+draw_set_color($50B0FF);
 draw_text(x, y, string(text));
 </string>
           </argument>

@@ -48,7 +48,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_restart();
+            <string>if !other.immune {
+    game_restart();
+} else {
+    other.immune = false;
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
