@@ -49,7 +49,7 @@ instance_create(room_width/20, 10, obj_entity)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//the input will handle all the touch movements
+            <string>//the obj_input will handle all the touch movements
 if !instance_exists(obj_input){
     instance_create(mouse_x,mouse_y ,obj_input)
 }
