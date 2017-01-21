@@ -74,6 +74,7 @@ variavel1 = variavel1 mod 20;
             <kind>1</kind>
             <string>draw_self();
 draw_text(x, y - 20, string(variavel1));
+draw_circle(x, y, 10, false)
 </string>
           </argument>
         </arguments>
