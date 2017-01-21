@@ -16,6 +16,8 @@
   <objects name="objects">
     <object>objects\obj_wave_point</object>
     <object>objects\obj_wave</object>
+    <object>objects\obj_input</object>
+    <object>objects\obj_game_manager</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
