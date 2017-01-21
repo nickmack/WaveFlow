@@ -26,14 +26,42 @@
           <argument>
             <kind>1</kind>
             <string>wave_point_number = 222;
+wave_speed = 2;
 amplitude = 100;
-frequency = 1;
-var offset = (room_width * 0.95) / wave_point_number;
+wavelength = 1;
+last_point = (ceil(room_width/360)*360);
+var offset = last_point / wave_point_number;
+wave_points = ds_list_create();
 for (var i = 0; i &lt; wave_point_number; i++) {
-    var cur_x = (0.05 * room_width) + i*offset;
-    var cur_y = wave_func(amplitude, frequency, cur_x);
-    show_debug_message(cur_y);
-    instance_create(cur_x, cur_y, obj_wave_point);
+    var cur_x = i*offset;
+    var cur_y = wave_func(amplitude, wavelength, cur_x);
+    ds_list_add(wave_points, instance_create(cur_x, cur_y, obj_wave_point));
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>for (var i = 0; i &lt; ds_list_size(wave_points); i++) {
+    var wv_pnt = ds_list_find_value(wave_points, i);
+    wv_pnt.x -= wave_speed;
 }
 </string>
           </argument>
