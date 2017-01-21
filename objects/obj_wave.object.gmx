@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>var wave_point_number = 222;
-wave_speed = 8;
 amplitude = 100;
 frequency = 1;
 var init_last = (ceil(room_width/360)*360);
@@ -63,7 +62,7 @@ last_point = ds_list_find_value(wave_points, wave_point_number - 1);
             <kind>1</kind>
             <string>for (var i = 0; i &lt; ds_list_size(wave_points); i++) {
     var wv_pnt = ds_list_find_value(wave_points, i);
-    wv_pnt.x -= wave_speed;
+    wv_pnt.x -= GAME_SPEED;
 }
 </string>
           </argument>
