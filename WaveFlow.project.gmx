@@ -16,28 +16,43 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\wave_func.gml</script>
+    <script>scripts\create_floating_text.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_HUD</font>
+    <font>fonts\fnt_text</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_wave_point</object>
-    <object>objects\obj_wave</object>
-    <object>objects\obj_input</object>
-    <object>objects\obj_game_manager</object>
-    <object>objects\obj_obstacle</object>
-    <object>objects\obj_obstacle_creator</object>
-    <object>objects\obj_entity</object>
-    <object>objects\obj_point</object>
-    <object>objects\obj_points_creator</object>
-    <object>objects\obj_timer</object>
+    <objects name="Wave">
+      <object>objects\obj_wave_point</object>
+      <object>objects\obj_wave</object>
+    </objects>
+    <objects name="Catchables">
+      <object>objects\obj_point</object>
+      <object>objects\obj_timer</object>
+    </objects>
+    <objects name="Controllers">
+      <object>objects\obj_obstacle_creator</object>
+      <object>objects\obj_points_creator</object>
+      <object>objects\obj_game_manager</object>
+    </objects>
+    <objects name="Obstacles">
+      <object>objects\obj_obstacle</object>
+    </objects>
+    <objects name="Player">
+      <object>objects\obj_input</object>
+      <object>objects\obj_entity</object>
+    </objects>
+    <objects name="GUI">
+      <object>objects\obj_floating_text</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
   <constants number="6">
     <constant name="MAX_V">10</constant>
-    <constant name="GAME_SPEED">4</constant>
+    <constant name="GAME_SPEED">5</constant>
     <constant name="MAX_FREQ">1.1</constant>
     <constant name="MIN_AMPL">room_height / 22</constant>
     <constant name="MAX_AMPL">room_height / 3</constant>
