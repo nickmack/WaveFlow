@@ -49,7 +49,11 @@
           <argument>
             <kind>1</kind>
             <string>if !other.immune {
-    game_restart();
+    
+    if(highscore &lt; score){
+        highscore = score;
+    }
+    room_goto(rm_game_over)
 } else {
     other.immune = false;
     instance_destroy();
