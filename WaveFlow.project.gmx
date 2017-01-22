@@ -62,6 +62,7 @@
       <object>objects\obj_points_creator</object>
       <object>objects\obj_game_manager</object>
       <object>objects\obj_game_music</object>
+      <object>objects\obj_credits</object>
     </objects>
     <objects name="Obstacles">
       <object>objects\obj_obstacle</object>
@@ -72,6 +73,7 @@
     </objects>
     <objects name="GUI">
       <object>objects\obj_floating_text</object>
+      <object>objects\obj_credits_text</object>
       <objects name="Buttons">
         <object>objects\obj_button</object>
         <object>objects\obj_credit_buttom</object>
