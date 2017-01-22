@@ -32,6 +32,7 @@ y = room_height/2;
 wave_x = x;
 remaining_time = room_speed * 30;
 immune = false;
+
 </string>
           </argument>
         </arguments>
@@ -66,7 +67,7 @@ if wave_y &lt; y {
 remaining_time--;
 
 if remaining_time &lt; 0 {
-    game_restart();
+    lose_game();
 }
 </string>
           </argument>
@@ -101,8 +102,7 @@ if remaining_time &lt; room_speed * 10 {
         draw_set_color(c_red);
     }
 }
-draw_text(5*room_width/6, 50, "TEMPO: " + string(floor(remaining_time / room_speed)) + "s")
-show_debug_message(y);
+draw_text(5*room_width/6, 50, "TEMPO: " + string(ceil(remaining_time / room_speed)) + "s")
 </string>
           </argument>
         </arguments>

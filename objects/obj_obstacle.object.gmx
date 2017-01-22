@@ -53,7 +53,7 @@
         highscore = score;
         scr_write_highscore();
     }
-    room_goto(rm_game_over)
+    lose_game();
 } else {
     other.immune = false;
     instance_destroy();

@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 3 * room_speed
+            <string>alarm[0] = 3 * room_speed;
+
 </string>
           </argument>
         </arguments>
@@ -51,9 +52,13 @@
             <string>var random_y = irandom_range(room_height/4, 3*room_height/4)
 var random_time = random_range(1.5, 3.5)
 
-instance_create(x, random_y, obj_obstacle);
-if random(1) &lt; 0.5 {
-    instance_create(x, room_height - random_y, obj_obstacle);
+if random(1) &lt; 0.25 {
+    instance_create(x, room_height/2, obj_obstacle);
+} else {
+    var obst = instance_create(x, random_y, obj_obstacle);
+    if random(1) &lt; 0.5 &amp;&amp; abs(random_y - room_height/2) &gt; obst.sprite_height*1.2{
+        instance_create(x, room_height - random_y, obj_obstacle);
+    }
 }
 
 alarm[0] = random_time * room_speed;

@@ -4,7 +4,13 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_bgmusic</sound>
+    <sound>sound\snd_clock</sound>
+    <sound>sound\snd_defeat</sound>
+    <sound>sound\snd_plin</sound>
+    <sound>sound\snd_shield</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spt_wave</sprite>
     <sprite>sprites\spr_entity</sprite>
@@ -12,26 +18,34 @@
     <sprite>sprites\spt_sparkle</sprite>
     <sprite>sprites\spt_timer</sprite>
     <sprite>sprites\spt_shield</sprite>
-    <sprite>sprites\spr_start</sprite>
-    <sprites name="GUI Menu">
-      <sprite>sprites\spr_intructions</sprite>
-      <sprite>sprites\spr_credits</sprite>
+    <sprites name="GUI Buttons">
       <sprite>sprites\spr_back_button</sprite>
       <sprite>sprites\spr_foward_button</sprite>
+      <sprite>sprites\spt_button</sprite>
+      <sprite>sprites\spt_start_button</sprite>
+      <sprite>sprites\spt_instructions_button</sprite>
+      <sprite>sprites\spt_credits_button</sprite>
     </sprites>
-    <sprite>sprites\spr_restar</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_gameover</background>
+    <background>background\bg_mainmenu</background>
+    <background>background\bg_game</background>
+    <background>background\bg_instructions</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\wave_func.gml</script>
     <script>scripts\create_floating_text.gml</script>
     <script>scripts\scr_load_highscore.gml</script>
     <script>scripts\scr_write_highscore.gml</script>
+    <script>scripts\draw_set_text.gml</script>
+    <script>scripts\lose_game.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_HUD</font>
     <font>fonts\fnt_text</font>
+    <font>fonts\fnt_GUI</font>
   </fonts>
   <objects name="objects">
     <objects name="Wave">
@@ -47,6 +61,7 @@
       <object>objects\obj_obstacle_creator</object>
       <object>objects\obj_points_creator</object>
       <object>objects\obj_game_manager</object>
+      <object>objects\obj_game_music</object>
     </objects>
     <objects name="Obstacles">
       <object>objects\obj_obstacle</object>
@@ -57,14 +72,15 @@
     </objects>
     <objects name="GUI">
       <object>objects\obj_floating_text</object>
-      <object>objects\obj_restart</object>
-    </objects>
-    <objects name="Menu">
-      <object>objects\obj_credit_buttom</object>
-      <object>objects\obj_instructions_button</object>
-      <object>objects\obj_back_button</object>
-      <object>objects\obj_foward_button</object>
-      <object>objects\obj_start_buttom</object>
+      <objects name="Buttons">
+        <object>objects\obj_button</object>
+        <object>objects\obj_credit_buttom</object>
+        <object>objects\obj_restart</object>
+        <object>objects\obj_instructions_button</object>
+        <object>objects\obj_back_button</object>
+        <object>objects\obj_foward_button</object>
+        <object>objects\obj_start_buttom</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

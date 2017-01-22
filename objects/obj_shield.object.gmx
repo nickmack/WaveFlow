@@ -52,6 +52,7 @@ hspeed = -1.5 *GAME_SPEED;
             <string>if other.immune == false {
     other.id.immune = true;
 }
+audio_play_sound(snd_shield, 1, false);
 instance_destroy();
 </string>
           </argument>

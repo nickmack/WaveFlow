@@ -52,6 +52,8 @@ image_speed = 0.5;
             <kind>1</kind>
             <string>score++;
 create_floating_text(x, y, "+1 ponto");
+audio_sound_gain(snd_plin, 0.25, 0);
+audio_play_sound(snd_plin, 1, false);
 instance_destroy();
 </string>
           </argument>

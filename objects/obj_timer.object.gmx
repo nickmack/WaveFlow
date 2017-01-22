@@ -5,24 +5,10 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_point</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -39,27 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.25;
+            <string>image_speed = 0.5;
+hspeed = -1.5 * GAME_SPEED;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_entity">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -77,7 +50,10 @@
           <argument>
             <kind>1</kind>
             <string>obj_entity.remaining_time += room_speed * 5;
-create_floating_text(x, y, "+1 ponto#+5 segundos");
+create_floating_text(x, y, "+5 segundos");
+audio_play_sound(snd_clock, 1, false);
+
+instance_destroy();
 </string>
           </argument>
         </arguments>
