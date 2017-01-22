@@ -31,7 +31,7 @@ instance_create(0, 0, obj_points_creator);
 
 //scores
 globalvar highscore ;
-highscore = 0
+highscore = scr_load_highscore();
 
 </string>
           </argument>
@@ -56,8 +56,35 @@ highscore = 0
           <argument>
             <kind>1</kind>
             <string>//the obj_input will handle all the touch movements
-if !instance_exists(obj_input){
-    instance_create(mouse_x,mouse_y ,obj_input)
+if(room == rm_main){
+    if !instance_exists(obj_input){
+        instance_create(mouse_x,mouse_y ,obj_input)
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(room == rm_main){
+    score = 0;
 }
 </string>
           </argument>

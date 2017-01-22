@@ -48,10 +48,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !other.immune {
-    
+            <string>if !other.immune {  
     if(highscore &lt; score){
         highscore = score;
+        scr_write_highscore();
     }
     room_goto(rm_game_over)
 } else {

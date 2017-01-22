@@ -26,6 +26,8 @@
   <scripts name="scripts">
     <script>scripts\wave_func.gml</script>
     <script>scripts\create_floating_text.gml</script>
+    <script>scripts\scr_load_highscore.gml</script>
+    <script>scripts\scr_write_highscore.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_HUD</font>
